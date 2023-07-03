@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        ul {
+            background-color: antiquewhite;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+
+        ul li {
+            padding: 10px;
+        }
+
+        .z_one {
+            position: absolute;
+            left: 10%;
+        }
+
+        .zahid {
+            display: none;
+        }
+
+        ul li ul li:hover {
+            background-color: rgb(108, 133, 133);
+        }
+
+        @media screen and (max-width:500px) {
+
+            ul li ul {
+                position: absolute;
+                background-color: aqua;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                left: 0px;
+                top: 38px;
+                display: none;
+            }
+
+            #myDiv {
+                display: none;
+            }
+
+            #myDiv:target {
+                display: block;
+            }
+
+            .zahid {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li class="z_one">Design</li>
+            <li class="z_two">
+                <ul id="myDiv">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Blog</li>
+                    <li class="zahid"><a href=""><i class="fa fa-close"></i></a></li>
+                </ul>
+            </li>
+            <li class="zahid"><a href="#myDiv"><i class="fa fa-bars"></i></a></li>
+        </ul>
+    </div>
+    <h2>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, rerum suscipit neque similique excepturi nihil
+        modi ducimus facilis, dolores tenetur architecto error. Atque in perspiciatis velit sunt molestias debitis
+        corrupti.
+    </h2>
+
+</body>
+
+</html>
